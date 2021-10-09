@@ -81,6 +81,7 @@ func OpenAPI3ValidatorFromParsed(
 				MultiError: multiError,
 			},
 		})
+		err = nvelope.ReturnCode(err, 400)
 		return err
 	}
 	response := func(httpCode int, enc []byte, header http.Header, r *http.Request) error {

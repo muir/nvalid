@@ -40,14 +40,6 @@ paths:
           format: email
           required: true
           description: example query parameter
-        - name: Content-Type
-          in: header
-          type: string
-          format: enum
-          values:
-            - application/json
-          required: false
-          description: expected content-type header
         - name: body
           in: body
           schema:
@@ -63,11 +55,12 @@ paths:
           description: example body parameter
       responses:
         200:
-          description: list of nearby boards
+          description: response
           schema:
             type: object
             required:
               - status
+            additionalProperties: false
             properties:
               status:
                 type: integer
@@ -75,8 +68,8 @@ paths:
                 type: number
         400:
           description: error
-          schema:
-            type: string`
+          produces:
+            - text/plain`
 
 type PostBodyModel struct {
 	John      bool    `json:"john"`
@@ -162,7 +155,19 @@ func Example() {
 		res.Body.Close()
 		fmt.Println(res.StatusCode, "->"+string(b))
 	}
+	fmt.Println("expect valid:")
 	doPost("/foo/100?baz=j@example.com", `{"john":false,"betty":"Flinstone"}`)
 
-	// Output: 200 ->{"status":100}
+	fmt.Println("expect request error:")
+	doPost("/foo/100", `{"john":false,"betty":"Flinstone"}`) // invalid request
+
+	fmt.Println("expect response error:")
+	doPost("/foo/100?baz=j@example.com", `{"john":true,"betty":"Flinstone"}`)
+
+	// Output: expect valid:
+	// 200 ->{"status":100}
+	// expect request error:
+	// 400 ->parameter "baz" in query has an error: value is required but missing: value is required but missing
+	// expect response error:
+	// 500 ???
 }
