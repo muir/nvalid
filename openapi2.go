@@ -44,7 +44,10 @@ func OpenAPI2Validator(
 	case "yml", "yaml":
 		err = yaml.Unmarshal(input, &v2Doc)
 	default:
-		return nil, nil, errors.Errorf("Cannot determine (based on extention) if %s is YAML or JSON", swaggerFile)
+		return nil, nil, errors.Errorf("Cannot determine (based on extension) if %s is YAML or JSON", swaggerFile)
+	}
+	if err != nil {
+		return nil, nil, errors.Wrapf(err, "unmarshal %s", swaggerFile)
 	}
 
 	v3Doc, err := openapi2conv.ToV3(&v2Doc)
