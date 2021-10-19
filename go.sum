@@ -41,8 +41,8 @@ github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e/go.mod h1:C1wdFJiN
 github.com/mattn/go-colorable v0.0.10-0.20170816031813-ad5389df28cd/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
 github.com/mattn/go-isatty v0.0.2/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/mitchellh/mapstructure v0.0.0-20170523030023-d0303fe80992/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
-github.com/muir/nject v0.0.7 h1:pfW7MY9L5/UhKiAwVpzQjXWCwMVrLRzupdNc5eVj9Mg=
-github.com/muir/nject v0.0.7/go.mod h1:meb7ngScPoblKgRxdPZvRe5fy6ZYlUevxcNyh7kqSC0=
+github.com/muir/nject v0.0.9 h1:IFVQ+QMYUWMoybARGWbfA9Arw3eHM5KtrToJXIq0ftM=
+github.com/muir/nject v0.0.9/go.mod h1:meb7ngScPoblKgRxdPZvRe5fy6ZYlUevxcNyh7kqSC0=
 github.com/pelletier/go-toml v1.0.1-0.20170904195809-1d6b12b7cb29/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

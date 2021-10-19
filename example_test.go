@@ -1,6 +1,7 @@
 package nvalid_test
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -16,9 +17,11 @@ import (
 	"github.com/muir/nvalid"
 )
 
-const swagger = `swagger: "2.0"
+const swagger = `
+swagger: "2.0"
 info:
   version: 1.0.0
+  title: testing
 schemes:
 - "http"
 
@@ -72,9 +75,8 @@ paths:
             - text/plain`
 
 type PostBodyModel struct {
-	John      bool    `json:"john"`
-	Betty     *string `json:"betty"`
-	NotListed *int    `json:"notListed,omitempty"`
+	John  bool    `json:"john"`
+	Betty *string `json:"betty"`
 }
 
 type ExampleRequestBundle struct {
@@ -85,8 +87,7 @@ type ExampleRequestBundle struct {
 }
 
 type ExampleResponse struct {
-	Status    int  `json:"status,omitempty"`
-	NotListed *int `json:"notListed,omitempty"`
+	Status interface{} `json:"status,omitempty"`
 }
 
 func HandleExampleEndpoint(req ExampleRequestBundle) (nvelope.Response, error) {
@@ -94,7 +95,7 @@ func HandleExampleEndpoint(req ExampleRequestBundle) (nvelope.Response, error) {
 		Status: 100,
 	}
 	if req.Request.John {
-		resp.NotListed = &resp.Status
+		resp.Status = "string"
 	}
 	return resp, nil
 }
@@ -109,6 +110,11 @@ func Service(router *mux.Router) {
 	if err != nil {
 		panic("v3 convert")
 	}
+	err = v3Doc.Validate(context.Background())
+	if err != nil {
+		panic("v3 validate")
+	}
+
 	requestValidator, responseValidator, err :=
 		nvalid.OpenAPI3ValidatorFromParsed(v3Doc, "inline", false)
 	if err != nil {
@@ -169,5 +175,14 @@ func Example() {
 	// expect request error:
 	// 400 ->parameter "baz" in query has an error: value is required but missing: value is required but missing
 	// expect response error:
-	// 500 ???
+	// 500 ->response body doesn't match the schema: Error at "/status": Field must be set to integer or not be present
+	// Schema:
+	//   {
+	//     "type": "integer"
+	//   }
+	//
+	// Value:
+	//   "string"
+	//
+	//
 }

@@ -102,7 +102,8 @@ func OpenAPI3ValidatorFromParsed(
 			Header: header,
 			Body:   io.NopCloser(bytes.NewReader(enc)),
 			Options: &openapi3filter.Options{
-				MultiError: multiError,
+				IncludeResponseStatus: true,
+				MultiError:            multiError,
 			},
 		})
 		return err
