@@ -3,6 +3,7 @@
 [![GoDoc](https://godoc.org/github.com/muir/nvalid?status.png)](https://pkg.go.dev/github.com/muir/nvalid)
 ![unit tests](https://github.com/muir/nvalid/actions/workflows/go.yml/badge.svg)
 [![report card](https://goreportcard.com/badge/github.com/muir/nvalid)](https://goreportcard.com/report/github.com/muir/nvalid)
+[![codecov](https://codecov.io/gh/muir/nvalid/branch/main/graph/badge.svg)](https://codecov.io/gh/muir/nvalid)
 
 Install:
 

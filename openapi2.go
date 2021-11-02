@@ -2,8 +2,8 @@ package nvalid
 
 import (
 	"encoding/json"
+	"io/ioutil"
 	"net/http"
-	"os"
 	"path/filepath"
 	"strings"
 
@@ -32,7 +32,7 @@ func OpenAPI2Validator(
 	nvelope.APIEnforcerFunc,
 	error,
 ) {
-	input, err := os.ReadFile(swaggerFile)
+	input, err := ioutil.ReadFile(swaggerFile)
 	if err != nil {
 		return nil, nil, errors.Wrapf(err, "read %s", swaggerFile)
 	}

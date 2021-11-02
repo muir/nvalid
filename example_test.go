@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"net/http/httptest"
 	"strings"
 
@@ -153,7 +153,7 @@ func Example() {
 			fmt.Println("response error:", err)
 			return
 		}
-		b, err := io.ReadAll(res.Body)
+		b, err := ioutil.ReadAll(res.Body)
 		if err != nil {
 			fmt.Println("read error:", err)
 			return
