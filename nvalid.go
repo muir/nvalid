@@ -2,7 +2,7 @@ package nvalid
 
 import (
 	"bytes"
-	"io"
+	"io/ioutil"
 	"net/http"
 	"net/url"
 
@@ -72,7 +72,7 @@ func OpenAPI3ValidatorFromParsed(
 		if err != nil {
 			return errors.Wrapf(err, "Find route for request to %s", r.URL)
 		}
-		r.Body = io.NopCloser(bytes.NewReader(body))
+		r.Body = ioutil.NopCloser(bytes.NewReader(body))
 		err = openapi3filter.ValidateRequest(r.Context(), &openapi3filter.RequestValidationInput{
 			Request:    r,
 			PathParams: pathParams,
@@ -100,7 +100,7 @@ func OpenAPI3ValidatorFromParsed(
 			},
 			Status: httpCode,
 			Header: header,
-			Body:   io.NopCloser(bytes.NewReader(enc)),
+			Body:   ioutil.NopCloser(bytes.NewReader(enc)),
 			Options: &openapi3filter.Options{
 				IncludeResponseStatus: true,
 				MultiError:            multiError,
