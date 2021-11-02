@@ -1,6 +1,6 @@
 module github.com/muir/nvalid
 
-go 1.16
+go 1.15
 
 require (
 	github.com/getkin/kin-openapi v0.78.0
