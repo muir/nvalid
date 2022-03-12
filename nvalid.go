@@ -9,8 +9,8 @@ import (
 	"github.com/getkin/kin-openapi/openapi3"
 	"github.com/getkin/kin-openapi/openapi3filter"
 	"github.com/getkin/kin-openapi/routers/gorillamux"
-	"github.com/muir/nject/nject"
-	"github.com/muir/nject/nvelope"
+	"github.com/muir/nject"
+	"github.com/muir/nvelope"
 	"github.com/pkg/errors"
 )
 

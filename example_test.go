@@ -12,9 +12,9 @@ import (
 	"github.com/getkin/kin-openapi/openapi2conv"
 	"github.com/ghodss/yaml"
 	"github.com/gorilla/mux"
-	"github.com/muir/nject/npoint"
-	"github.com/muir/nject/nvelope"
+	"github.com/muir/nape"
 	"github.com/muir/nvalid"
+	"github.com/muir/nvelope"
 )
 
 const swagger = `
@@ -123,7 +123,7 @@ func Service(router *mux.Router) {
 	encodeJSON := nvelope.MakeResponseEncoder("JSON",
 		nvelope.WithEncoder("application/json", json.Marshal,
 			nvelope.WithAPIEnforcer(responseValidator)))
-	service := npoint.RegisterServiceWithMux("example", router)
+	service := nape.RegisterServiceWithMux("example", router)
 	service.RegisterEndpoint("/foo/{bar}",
 		// order matters and this is a correct order
 		nvelope.NoLogger,
@@ -133,13 +133,13 @@ func Service(router *mux.Router) {
 		nvelope.Nil204,
 		nvelope.ReadBody,
 		requestValidator,
-		nvelope.DecodeJSON,
+		nape.DecodeJSON,
 		HandleExampleEndpoint,
 	).Methods("POST")
 }
 
 // Example shows an injection chain handling a single endpoint using nject,
-// npoint, and nvelope.
+// nape, and nvelope.
 func Example() {
 	r := mux.NewRouter()
 	Service(r)

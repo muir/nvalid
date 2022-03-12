@@ -12,7 +12,7 @@ Install:
 ---
 
 Nvalid is a wrapper around [kin-openapi](https://pkg.go.dev/github.com/getkin/kin-openapi) to
-make it easy for [nvelope](https://github.com/muir/nject/tree/main/nvelope) to validate requests
+make it easy for [nvelope](https://github.com/muir/nvelope) to validate requests
 and responses.
 
 kin-openapi is a package that parses and manipulates OpenAPI2 and OpenAPI3 files.  It can

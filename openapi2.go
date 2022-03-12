@@ -10,8 +10,8 @@ import (
 	"github.com/getkin/kin-openapi/openapi2"
 	"github.com/getkin/kin-openapi/openapi2conv"
 	"github.com/ghodss/yaml"
-	"github.com/muir/nject/nject"
-	"github.com/muir/nject/nvelope"
+	"github.com/muir/nject"
+	"github.com/muir/nvelope"
 	"github.com/pkg/errors"
 )
 
