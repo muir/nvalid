@@ -173,7 +173,7 @@ func Example() {
 	// Output: expect valid:
 	// 200 ->{"status":100}
 	// expect request error:
-	// 400 ->parameter "baz" in query has an error: value is required but missing: value is required but missing
+	// 400 ->parameter "baz" in query has an error: value is required but missing
 	// expect response error:
 	// 500 ->response body doesn't match the schema: Error at "/status": Field must be set to integer or not be present
 	// Schema:
