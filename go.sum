@@ -46,8 +46,9 @@ github.com/mattn/go-colorable v0.0.10-0.20170816031813-ad5389df28cd/go.mod h1:9v
 github.com/mattn/go-isatty v0.0.2/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/mitchellh/mapstructure v0.0.0-20170523030023-d0303fe80992/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
 github.com/muir/nape v0.2.0/go.mod h1:VjvP6gR5PzQ3yyOPjyGlFOxDFucMVhBkaJGT6c0CvsU=
-github.com/muir/nape v0.2.1 h1:Yce3vLOW4umOMwFzvqYHfIKa3Ltx0Y6qiGcE8yFPkJA=
 github.com/muir/nape v0.2.1/go.mod h1:FE26YLNvUZ7DQJVW34+ypho9cGTn0NccvXjMaDo1nTw=
+github.com/muir/nape v0.2.2 h1:9V3xxKJrWrx8Doq2j6F0xOGcN6p58GRv2SmwWf9xpZw=
+github.com/muir/nape v0.2.2/go.mod h1:HElvKqBZGYL+/LEBEr+HuKati7YCYABuuUkdzPK2TTo=
 github.com/muir/nchi v0.0.1/go.mod h1:v6gUg0F1wD7qpZcp6I2/5Y4IUA9qzlKgCqehdEuOPJg=
 github.com/muir/nchi v0.0.2 h1:oPF7lClJcpZsJL8veR1eEDDcldTqa/8g5z7NJ1Z1bLA=
 github.com/muir/nchi v0.0.2/go.mod h1:lkfo2+b2I4mny/PxSHJ87bKs+y1e9LAChg6f9lXOPGI=
