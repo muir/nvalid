@@ -64,8 +64,8 @@ github.com/muir/nject v0.2.0/go.mod h1:vFJkDQciI0UURYI3cSZLyBhYxL3gn+4FvJBY9cZSs
 github.com/muir/nject v0.4.0/go.mod h1:le4jeI0HP94VGIAGbdB4gLMzWENM/uHh8Iq3/Qv8wak=
 github.com/muir/nject v0.5.0/go.mod h1:kOa7nnqqV0tbg2tylEyZ0xtEl4tfC25wow7efbnba+M=
 github.com/muir/nject v1.3.2/go.mod h1:ab6sXXg40/HOuC0hBr7LUGKbnwYuTjfk+6cgtpr3hKY=
-github.com/muir/nject v1.4.1 h1:OocOGdQ9UiGARZY3UsXgB7j9036zcfwFGuNGI0KBbW4=
-github.com/muir/nject v1.4.1/go.mod h1:La+tn8IPEEc7ryUX6W05rcipZRGbPhAVz9rrzH2DbdI=
+github.com/muir/nject v1.5.0 h1:8M9tbYM3Uw8zyYPchNBf5fb2WnOrc/HVmDYqkvDrebk=
+github.com/muir/nject v1.5.0/go.mod h1:YkPfCewGnkFnr8z+hmIxHZXYPvdRQ+DlDfbq9M2bBng=
 github.com/muir/nvelope v0.2.0/go.mod h1:raB9voDUnhMELiU2fZG7yHYdiRGKSh/FGtsjYWtdbpc=
 github.com/muir/nvelope v0.3.0/go.mod h1:XWPSm68reA4rxkuC/keqHbeFT9QJBorF2ttjF7flzyM=
 github.com/muir/nvelope v0.3.1/go.mod h1:bND7Jn4CqmEEKXyTh+GKtbN4Bi4GKnWRSR4iB5l0+AU=
@@ -97,8 +97,9 @@ github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81P
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
-github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
 github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
+github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
+github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/ugorji/go v1.2.7 h1:qYhyWUUd6WbiM+C6JZAUkIJt/1WrjzNHY9+KCIjVqTo=
 github.com/ugorji/go v1.2.7/go.mod h1:nF9osbDWLy6bDVv/Rtoh6QgnvNDpmCalQV5urGCCS6M=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
