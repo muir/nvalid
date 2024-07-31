@@ -3,7 +3,7 @@ module github.com/muir/nvalid
 go 1.16
 
 require (
-	github.com/getkin/kin-openapi v0.113.0
+	github.com/getkin/kin-openapi v0.127.0
 	github.com/ghodss/yaml v1.0.0
 	github.com/gorilla/mux v1.8.1
 	github.com/muir/nape v0.2.2
